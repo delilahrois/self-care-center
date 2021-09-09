@@ -7,54 +7,72 @@ white - #ffffff;
 black - #000000;
 */
 body {
-  margin: 90px;
-  font-family: 'Quicksand', sans-serif;
-  color: #ffffff;
-  background-image: linear-gradient(#134d71, #f7e4bf);
-  background-color: #134d71;
-  height: 100vh;
-  background-size: cover;
-  text-align: center;
+  margin: 90px; /*necessary*/
+  font-family: 'Quicksand', sans-serif; /*necessary*/
+  color: #ffffff; /*necessary*/
+  background-image: linear-gradient(#134d71, #f7e4bf); /*necessary*/
+  background-color: #134d71; /*necessary*/
+  background-attachment: fixed;
+  background-size: cover; /*necessary*/
+  background-repeat: no-repeat; /*necessary*/
+  text-align: center; /*necessary*/
 }
 
-#question {
-  margin: 80px 10px 50px 10px;
+h1 {
+  font-size: calc(2rem + 1.5vw); /*necessary*/
+}
+
+h2 {
+  font-size: calc(1rem + 1vw); /*necessary*/
+  margin: 80px 10px 50px 10px; /*necessary*/
 }
 
 #first-box {
   background-color: #ffffff;
-  border-radius: 10px;
-  width: 500px;
-  height: 100px;
-  padding: 20px 50px 5px 50px;
+  border-radius: 20px;
+  width: 50%;
+  height: 10%;
+  max-width: 600px;
+  max-height: 100px;
+  padding: 20px 50px;
   margin: 0 auto;
   font-style: italic;
   align-content: center;
   color: #000000;
+  font-size: calc(0.5rem + 0.8vw);
 }
 
-#second-box {
+#message-box {
   color: #000000;
-  font-size: 120%;
+  font-size: calc(1rem + 0.8vw);
   background-color: #ffffff;
-  border-radius: 10px;
-  height: 40px;
-  width: 900px;
-  padding: 60px;
+  border-radius: 20px;
   margin: 0 auto;
+  width: 75%;
+  min-height: 40px;
+  padding: 40px;
 }
 
 #meditating-icon {
-  height: 80px;
-  width: 80px;
-  margin: 0 auto;
+  width: 15%; /*necessary*/
+  margin: 0 auto; /*necessary*/
+}
+
+input[type=radio] {
+  width: 10%;
+  height: 1em;
+  margin-bottom: 20px;
 }
 
 button {
-  color: #ffffff;
-  background-color: #134d71;
-  font-family: 'Quicksand', sans-serif;
-  border: 5px;
-  padding:10px 40px 10px 40px;
-  border-radius: 10px;
+  color: #ffffff; /*necessary*/
+  background-color: #134d71; /*necessary*/
+  font-family: 'Quicksand', sans-serif; /*necessary*/
+  width: 50%; /*necessary*/
+  height: 40%; /*necessary*/
+  border: 5px; /*necessary*/
+  padding:10px; /*necessary*/
+  border-radius: 20px;/*necessary*/
+  font-size: calc(0.5rem + 0.8vw); /*necessary*/
+  text-align: center;/*necessary*/
 }

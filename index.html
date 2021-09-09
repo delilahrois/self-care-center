@@ -4,25 +4,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
-    <title>✨ Self Care Center ✨</title>
+    <title>Self Care Center</title>
+    <link rel="shortcut icon" type="svg" href="assets/sparkles.svg"/>
+</svg>
+
   </head>
   <body>
     <header>
-      <h1 class="text">✨ Self Care Center ✨</h1>
-      <h2 class="text" id="question">Which type of message do you seek?</h2>
+      <h1>✨ Self Care Center ✨</h1>
+      <h2>Which type of message do you seek?</h2>
     </header>
     <div id="first-box">
-      <input name="grp1" type="radio" id="affirmation">affirmation</input>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-      <input name="grp1" type="radio" id="mantra">mantra</input>
-      <br><br>
+      <label>
+        <input name="grp1" type="radio" id="affirmation">affirmation</input>
+        <input name="grp1" type="radio" id="mantra">mantra</input>
+      </label>
       <button id="receive-message-btn">Receive Love</button>
     </div>
     <br><br><br>
-    <div id="second-box">
-      <div id="message-box">
-        <img src="assets/meditate.svg" id="meditating-icon" alt="meditating person"/>
-      </div>
-    </div>
+    <article id="message-box">
+      <img src="assets/meditate.svg" id="meditating-icon" alt="meditating person"/>
+    </article>
     <script type="text/javascript" src="main.js"></script>
   </body>
 </html>
