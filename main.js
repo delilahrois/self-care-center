@@ -58,6 +58,8 @@ function showRandomMessage() {
     messageBox.innerText = mantras[getRandomIndex(mantras)];
     body.classList.add('mantra-background');
   }
+  //**BUGS**//
+  
   //when toggling back to affirmation from mantra, background does not change color.
 
   //CSS Message box changes size when toggling between message and meditating icon.

@@ -7,28 +7,28 @@ white - #ffffff;
 black - #000000;
 */
 body {
-  margin: 90px; /*necessary*/
-  font-family: 'Quicksand', sans-serif; /*necessary*/
-  color: #ffffff; /*necessary*/
-  background-image: linear-gradient(#134d71, #f7e4bf); /*necessary*/
+  margin: 90px;
+  font-family: 'Quicksand', sans-serif;
+  color: #ffffff;
+  background-image: linear-gradient(#134d71, #f7e4bf);
   background-attachment: fixed;
-  background-size: cover; /*necessary*/
-  background-repeat: no-repeat; /*necessary*/
-  text-align: center; /*necessary*/
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
 }
 
 h1 {
-  font-size: calc(1.5rem + 1.5vw); /*necessary*/
+  font-size: calc(1.5rem + 1.5vw);
 }
 
 h2 {
-  font-size: calc(1rem + 1vw); /*necessary*/
-  margin: 80px 10px 50px 10px; /*necessary*/
+  font-size: calc(1rem + 1vw);
+  margin: 80px 10px 50px 10px;
 }
 
 #first-box {
   background-color: #ffffff;
-  border-radius: 20px;
+  border-radius: 12px;
   width: 50%;
   height: 10%;
   max-width: 600px;
@@ -45,7 +45,7 @@ h2 {
   color: #000000;
   font-size: calc(1rem + 0.8vw);
   background-color: #ffffff;
-  border-radius: 20px;
+  border-radius: 12px;
   margin: 0 auto;
   width: 75%;
   min-height: 40px;
@@ -53,8 +53,8 @@ h2 {
 }
 
 #meditating-icon {
-  width: 15%; /*necessary*/
-  margin: 0 auto; /*necessary*/
+  width: 15%;
+  margin: 0 auto;
 }
 
 input[type=radio] {
@@ -64,16 +64,16 @@ input[type=radio] {
 }
 
 button {
-  color: #ffffff; /*necessary*/
-  background-color: #134d71; /*necessary*/
-  font-family: 'Quicksand', sans-serif; /*necessary*/
-  width: 50%; /*necessary*/
-  height: 40%; /*necessary*/
-  border: 5px; /*necessary*/
-  padding:10px; /*necessary*/
-  border-radius: 20px;/*necessary*/
-  font-size: calc(0.5rem + 0.8vw); /*necessary*/
-  text-align: center;/*necessary*/
+  color: #ffffff;
+  background-color: #134d71;
+  font-family: 'Quicksand', sans-serif;
+  width: 50%;
+  height: 40%;
+  border: 5px;
+  padding:10px;
+  border-radius: 12px;
+  font-size: calc(0.5rem + 0.8vw);
+  text-align: center;
 }
 
 #clear-message-btn {
@@ -82,35 +82,61 @@ button {
   height: 40%;
 }
 
-@keyframes fadeIn{
-  0%{opacity: 1;}
-  100%{opacity: 0;}
+#clear-message-btn:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+  background-color: #F99BFF;
+}
+
+#receive-message-btn:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+  background-color: #F99BFF;
+}
+
+@-webkit-keyframes fadeIn {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-moz-keyframes fadeIn {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-o-keyframes fadeIn {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes fadeIn {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
 }
 
 .fade {
-  animation: fadeIn 4s; linear;
-  color: #000000;
+  -webkit-animation: fadeIn 5s infinite; /* Safari 4+ */
+  -moz-animation:    fadeIn 5s infinite; /* Fx 5+ */
+  -o-animation:      fadeIn 5s infinite; /* Opera 12+ */
+  animation:         fadeIn 5s infinite; /* IE 10+, Fx 29+ */
 }
 
 .affirmation-background {
-  margin: 90px; /*necessary*/
-  font-family: 'Quicksand', sans-serif; /*necessary*/
-  color: #ffffff; /*necessary*/
-  background-image: linear-gradient(#f08080, #c9e4de); /*necessary*/
+  margin: 90px;
+  font-family: 'Quicksand', sans-serif;
+  color: #ffffff;
+  background-image: linear-gradient(#f08080, #c9e4de);
   background-attachment: fixed;
-  background-size: cover; /*necessary*/
-  background-repeat: no-repeat; /*necessary*/
+  background-size: cover;
+  background-repeat: no-repeat;
   text-align: center;
 }
 
 .mantra-background {
-  margin: 90px; /*necessary*/
-  font-family: 'Quicksand', sans-serif; /*necessary*/
-  color: #ffffff; /*necessary*/
-  background-image: linear-gradient(#757bc8, #f9dcc4); /*necessary*/
+  margin: 90px;
+  font-family: 'Quicksand', sans-serif;
+  color: #ffffff;
+  background-image: linear-gradient(#757bc8, #f9dcc4);
   transition: background 3s fadeIn;
   background-attachment: fixed;
-  background-size: cover; /*necessary*/
-  background-repeat: no-repeat; /*necessary*/
+  background-size: cover;
+  background-repeat: no-repeat;
   text-align: center;
 }
