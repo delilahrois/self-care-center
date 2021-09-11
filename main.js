@@ -4,8 +4,12 @@ var mantra = document.querySelector('#mantra');
 var receiveMsgBtn = document.querySelector('#receive-message-btn');
 var meditatingIcon = document.querySelector('#meditating-icon');
 var messageBox = document.querySelector('#message-box');
+var message = document.querySelector('#message');
+var clearMsgBtn = document.querySelector('#clear-message-btn');
+var body = document.querySelector('body');
 
 receiveMsgBtn.addEventListener('click', showRandomMessage);
+clearMsgBtn.addEventListener('click', clearMessage);
 
 var affirmations = [
   'I forgive myself and set myself free.',
@@ -46,9 +50,19 @@ function getRandomIndex(array) {
 };
 
 function showRandomMessage() {
+  event.preventDefault();
   if (affirmation.checked === true) {
     messageBox.innerText = affirmations[getRandomIndex(affirmations)];
+    body.classList.add('affirmation-background');
   } else if (mantra.checked === true) {
     messageBox.innerText = mantras[getRandomIndex(mantras)];
+    body.classList.add('mantra-background');
   }
+  //when toggling back to affirmation from mantra, background does not change color.
+
+  //CSS Message box changes size when toggling between message and meditating icon.
+};
+
+function clearMessage() {
+  messageBox.innerHTML = '<img src="assets/meditate.svg" id="meditating-icon" alt="meditating person"/>';
 };
