@@ -31,7 +31,7 @@ h2 {
   border-radius: 12px;
   width: 50%;
   height: 10%;
-  max-width: 600px;
+  max-width: 500px;
   max-height: 100px;
   padding: 20px 50px;
   margin: 40px auto;
@@ -52,22 +52,52 @@ h2 {
   padding: 40px;
 }
 
+@keyframes fadein {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
 #meditating-icon {
   width: 15%;
+  height: 80px;
   margin: 0 auto;
+  animation: fadein 4s;
+}
+
+#message {
+  color: #000000;
+  animation: fadein 4s;
 }
 
 input[type=radio] {
   width: 10%;
   height: 1em;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
 }
+
 
 button {
   color: #ffffff;
   background-color: #134d71;
   font-family: 'Quicksand', sans-serif;
-  width: 50%;
+  width: 40%;
+  max-width: 200px;
+  margin: 40px;
   height: 40%;
   border: 5px;
   padding:10px;
@@ -76,46 +106,22 @@ button {
   text-align: center;
 }
 
-#clear-message-btn {
-  margin: 20px;
-  width: 30%;
-  height: 40%;
-}
-
-#clear-message-btn:hover {
+body button:hover {
   cursor: pointer;
-  transform: scale(1.2);
-  background-color: #F99BFF;
+  transform: scale(1.1);
+  background-color: #64B7F4;
 }
 
-#receive-message-btn:hover {
+.affirmation-background button:hover {
   cursor: pointer;
-  transform: scale(1.2);
+  transform: scale(1.1);
+  background-color: #78B2AD;
+}
+
+.mantra-background button:hover {
+  cursor: pointer;
+  transform: scale(1.1);
   background-color: #F99BFF;
-}
-
-@-webkit-keyframes fadeIn {
-  0%   { opacity: 0; }
-  100% { opacity: 1; }
-}
-@-moz-keyframes fadeIn {
-  0%   { opacity: 0; }
-  100% { opacity: 1; }
-}
-@-o-keyframes fadeIn {
-  0%   { opacity: 0; }
-  100% { opacity: 1; }
-}
-@keyframes fadeIn {
-  0%   { opacity: 0; }
-  100% { opacity: 1; }
-}
-
-.fade {
-  -webkit-animation: fadeIn 5s infinite; /* Safari 4+ */
-  -moz-animation:    fadeIn 5s infinite; /* Fx 5+ */
-  -o-animation:      fadeIn 5s infinite; /* Opera 12+ */
-  animation:         fadeIn 5s infinite; /* IE 10+, Fx 29+ */
 }
 
 .affirmation-background {
