@@ -50,26 +50,25 @@ function getRandomIndex(array) {
 };
 
 function showRandomMessage() {
-  if (affirmation.checked === true) {
+  clearMsgBtn.classList.remove('hidden');
+  if (affirmation.checked) {
     messageBox.innerHTML = `
       <h3 id="message">${affirmations[getRandomIndex(affirmations)]}</h3>
     `
     body.classList.add('affirmation-background');
     body.classList.remove('mantra-background');
-  } else if (mantra.checked === true) {
+  } else if (mantra.checked) {
     messageBox.innerHTML = `
       <h3 id="message">${mantras[getRandomIndex(mantras)]}</h3>
     `
     body.classList.add('mantra-background');
     body.classList.remove('affirmation-background');
   }
-  //**BUGS**//
-
-  //CSS Message box changes size when toggling between message and meditating icon.
 };
 
 function clearMessage() {
   messageBox.innerHTML = '<img src="assets/meditate.svg" id="meditating-icon" alt="meditating person"/>';
   body.classList.remove('mantra-background');
   body.classList.remove('affirmation-background');
+  clearMsgBtn.classList.add('hidden');
 };
