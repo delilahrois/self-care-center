@@ -26,4 +26,4 @@ The final product can be found [here.](https://delilahrois.github.io/self-care-c
 ## Contributors
   - [Delilah Necrason](https://github.com/delilahrois)
 
-The project spec can be found [here!](https://frontend.turing.io/projects/module-1/self-care-center.html).
+The project spec can be found [here!](https://frontend.turing.io/projects/module-1/self-care-center.html)
