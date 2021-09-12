@@ -1,15 +1,14 @@
 var affirmation = document.querySelector('#affirmation');
-var mantra = document.querySelector('#mantra');
-
-var receiveMsgBtn = document.querySelector('#receive-message-btn');
-var meditatingIcon = document.querySelector('#meditating-icon');
-var messageBox = document.querySelector('#message-box');
-var message = document.querySelector('#message');
-var clearMsgBtn = document.querySelector('#clear-message-btn');
 var body = document.querySelector('body');
+var clearMsgBtn = document.querySelector('#clear-message-btn');
+var mantra = document.querySelector('#mantra');
+var meditatingIcon = document.querySelector('#meditating-icon');
+var message = document.querySelector('#message');
+var messageBox = document.querySelector('#message-box');
+var receiveMsgBtn = document.querySelector('#receive-message-btn');
 
-receiveMsgBtn.addEventListener('click', showRandomMessage);
 clearMsgBtn.addEventListener('click', clearMessage);
+receiveMsgBtn.addEventListener('click', showRandomMessage);
 
 var affirmations = [
   'I forgive myself and set myself free.',
@@ -45,31 +44,31 @@ var mantras = [
   'I am the sky, the rest is weather.'
 ];
 
+function clearMessage() {
+  messageBox.innerHTML = '<img src="assets/meditate.svg" id="meditating-icon" alt="meditating person"/>';
+  body.classList.remove('mantra-background');
+  body.classList.remove('affirmation-background');
+  clearMsgBtn.classList.add('hidden');
+};
+
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 };
 
 function showRandomMessage() {
-  if (affirmation.checked === true) {
+  if (affirmation.checked) {
     messageBox.innerHTML = `
       <h3 id="message">${affirmations[getRandomIndex(affirmations)]}</h3>
     `
     body.classList.add('affirmation-background');
     body.classList.remove('mantra-background');
-  } else if (mantra.checked === true) {
+    clearMsgBtn.classList.remove('hidden');
+  } else if (mantra.checked) {
     messageBox.innerHTML = `
       <h3 id="message">${mantras[getRandomIndex(mantras)]}</h3>
     `
     body.classList.add('mantra-background');
     body.classList.remove('affirmation-background');
+    clearMsgBtn.classList.remove('hidden');
   }
-  //**BUGS**//
-
-  //CSS Message box changes size when toggling between message and meditating icon.
-};
-
-function clearMessage() {
-  messageBox.innerHTML = '<img src="assets/meditate.svg" id="meditating-icon" alt="meditating person"/>';
-  body.classList.remove('mantra-background');
-  body.classList.remove('affirmation-background');
 };

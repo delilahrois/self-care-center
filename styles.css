@@ -1,13 +1,5 @@
-/* font-family: 'Quicksand', sans-serif;
-COLORS
-light-yellow - #f7e4bf;
-light-blue - #78a7c6;
-dark-blue - #134d71;
-white - #ffffff;
-black - #000000;
-*/
 body {
-  margin: 90px;
+  margin: 60px;
   font-family: 'Quicksand', sans-serif;
   color: #ffffff;
   background-image: linear-gradient(#134d71, #f7e4bf);
@@ -32,7 +24,7 @@ h2 {
   width: 50%;
   height: 10%;
   max-width: 500px;
-  max-height: 100px;
+  max-height: 115px;
   padding: 20px 50px;
   margin: 40px auto;
   font-style: italic;
@@ -42,8 +34,6 @@ h2 {
 }
 
 #message-box {
-  color: #000000;
-  font-size: calc(1rem + 0.8vw);
   background-color: #ffffff;
   border-radius: 12px;
   margin: 0 auto;
@@ -73,7 +63,7 @@ h2 {
 }
 
 #meditating-icon {
-  width: 15%;
+  width: 20%;
   height: 80px;
   margin: 0 auto;
   animation: fadein 4s;
@@ -81,13 +71,19 @@ h2 {
 
 #message {
   color: #000000;
+  margin-bottom: 30px;
+  font-size: calc(.8rem + 0.8vw);
   animation: fadein 4s;
 }
 
+#clear-message-btn {
+  margin-top: 30px;
+}
+
 input[type=radio] {
+  margin-top: 10px;
   width: 10%;
   height: 1em;
-  /* margin-bottom: 20px; */
 }
 
 
@@ -125,7 +121,7 @@ body button:hover {
 }
 
 .affirmation-background {
-  margin: 90px;
+  margin: 60px;
   font-family: 'Quicksand', sans-serif;
   color: #ffffff;
   background-image: linear-gradient(#f08080, #c9e4de);
@@ -136,13 +132,16 @@ body button:hover {
 }
 
 .mantra-background {
-  margin: 90px;
+  margin: 60px;
   font-family: 'Quicksand', sans-serif;
   color: #ffffff;
   background-image: linear-gradient(#757bc8, #f9dcc4);
-  transition: background 3s fadeIn;
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
   text-align: center;
+}
+
+.hidden {
+  visibility: hidden;
 }
