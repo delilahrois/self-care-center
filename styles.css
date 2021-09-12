@@ -47,21 +47,6 @@ h2 {
   to { opacity: 1; }
 }
 
-@-webkit-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-@-moz-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-@-ms-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
 #meditating-icon {
   width: 20%;
   height: 80px;
@@ -71,7 +56,7 @@ h2 {
 
 #message {
   color: #000000;
-  margin-bottom: 30px;
+  margin-bottom: 32px;
   font-size: calc(.8rem + 0.8vw);
   animation: fadein 4s;
 }
